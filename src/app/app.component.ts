@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-training-bis';
+ 
+  count: number = 10;
+
+  onCountChange($event){
+        console.log("AppComponent.onCountChange()");
+        this.count = $event
+  }
 }
