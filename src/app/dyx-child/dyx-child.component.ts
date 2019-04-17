@@ -7,9 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChange
 })
 export class DyxChildComponent implements OnInit, OnChanges {
 
-  @Input()
-  parentCount: number;
- 
+  _parentCount: number;
+  
   @Output() onChildCountChange = new EventEmitter<number>();
 
   constructor() { }
@@ -20,6 +19,16 @@ export class DyxChildComponent implements OnInit, OnChanges {
 
   }
 
+
+  @Input()
+  set parentCount(parentCount: number){
+    this._parentCount = parentCount;
+  }
+
+  get parentCount(){
+    return this._parentCount;
+  }
+    
   //Called when any field input in the component changes
   ngOnChanges(changes: SimpleChanges): void {
     console.log('DyxChildComponent.ngOnChanges()');
