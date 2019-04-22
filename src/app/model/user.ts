@@ -3,8 +3,6 @@ export class User {
 
     private _lastName: string;
 
-
-
     constructor(firstName: string, lastName: string) {
         this._firstName = firstName;
         this._lastName = lastName;

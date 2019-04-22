@@ -1,7 +1,7 @@
 <div>
    <ul>
       <p>List of users :</p>
-      <li *ngFor="let u of users" >{{u._firstName}}</li>
+      <li *ngFor="let u of users" >{{u | prettyName}}</li>
    </ul>
 </div>
 
