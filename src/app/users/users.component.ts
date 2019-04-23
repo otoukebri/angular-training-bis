@@ -6,18 +6,18 @@ import { UserPipe } from '../pipes/UserPipe';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
-  styleUrls: ['./users.component.css'],
-  providers: [ UserPipe ]
+  styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
 
   users: Array<User>;
 
-  constructor(private _usersService: UsersService, userPipe: UserPipe) {
-   }
+  constructor(private usersService: UsersService) {
+
+  }
 
   ngOnInit() {
-    this.users = this._usersService.getUsers();
+    this.users = this.usersService.getUsers();
     console.log(JSON.stringify(this.users));
   }
 
