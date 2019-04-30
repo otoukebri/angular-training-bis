@@ -13,8 +13,8 @@ export class TodoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.todos.push(new Todo('todo 1'));
-    this.todos.push(new Todo('todo 2'));
+    this.todos.push(new Todo('Todo 1'));
+    this.todos.push(new Todo('Todo 2'));
   }
 
 }

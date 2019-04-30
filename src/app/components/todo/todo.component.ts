@@ -8,15 +8,15 @@ import { Todo } from '../../model/todo';
 })
 export class TodoComponent implements OnInit, OnChanges {
 
-    // todo: Todo;
+    _todo: Todo;
 
      @Input('todo')
      set todo(todo: Todo) {
-         this.todo = todo;
+         this._todo = todo;
      }
 
      get todo() {
-         return this.todo;
+         return this._todo;
      }
 
     ngOnInit() {
@@ -24,6 +24,6 @@ export class TodoComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges() {
-        console.log(this.todo);
+        console.log(this._todo);
     }
 }
