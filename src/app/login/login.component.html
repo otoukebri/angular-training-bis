@@ -1,0 +1,21 @@
+<div>
+  <label for="">
+    Login :
+  <input type="text" [formControl]="login">
+
+  </label>
+</div>
+
+<br>
+
+<div>
+    <label for="">
+        password :
+      <input type="text" [formControl]="password">  
+    </label>
+</div>
+
+<label>Display again : {{login.valueChanges | async}} </label>
+
+<BR>
+<button (click)="authenticate()">Login:</button>
