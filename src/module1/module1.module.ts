@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component2Component } from './component2/component2.component';
+import { Component3Component } from './component3/component3.component';
 
 @NgModule({
-  declarations: [Component2Component],
+  declarations: [Component3Component],
   imports: [
     CommonModule
   ]
