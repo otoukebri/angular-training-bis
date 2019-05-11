@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +8,24 @@ import { FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  login = new FormControl('');
-  password = new FormControl('');
+  loginFormGroup = new FormGroup({
+    login: new FormControl(''),
+    password: new FormControl('')
+  });
 
 
-constructor() { }
+  constructor() { }
 
-ngOnInit() {
-}
+  ngOnInit() {
+  }
 
-authenticate() {
-  console.log('authenticate clicked');
-  this.login.setValue('invalid login');
-}
+  authenticate() {
+    console.log('authenticate clicked');
+    this.loginFormGroup.controls.login.setValue('invalid login');
+  }
+
+  onSubmit() {
+    console.warn(this.loginFormGroup.value);
+  }
 
 }
