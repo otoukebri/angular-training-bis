@@ -12,9 +12,13 @@ export class ProductDetailComponent implements OnInit {
 
   selectedProduct: Product; // = this.productService.getProducts()[0];
 
-  constructor(private route: ActivatedRoute, private router: Router, private productService: ProductService) { }
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private productService: ProductService) { }
 
   ngOnInit() {
+    const x =  this.route.snapshot.data;
+    console.log(x);
     this.route.params.subscribe(params => {
       this.selectedProduct = this.productService.getProducts()
         .filter(p => p.id === Number(params.id))[0];

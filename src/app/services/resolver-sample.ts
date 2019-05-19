@@ -8,6 +8,6 @@ import { delay } from 'rxjs/operators';
 export class ResolverSample implements Resolve<Observable<string>> {
     resolve() {
       console.log(`ResolverSample`);
-      return of('hello').pipe(delay(50000));
+      return of('hello').pipe(delay(500000));
     }
 }
