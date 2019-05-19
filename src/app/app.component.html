@@ -5,10 +5,11 @@
   </h1>
 </div>
 
-<div>
-  <!-- <a [routerLink]="['/cmp2']">component2</a>
-  <BR>
-  <a [routerLink]="['/cmp3']">component3</a> -->
-
+<div style="float:right">
+  <router-outlet name ="sidebar" ></router-outlet>
 </div>
-<router-outlet></router-outlet>
+
+<div style="float:left">
+  <router-outlet></router-outlet>
+</div>
+
