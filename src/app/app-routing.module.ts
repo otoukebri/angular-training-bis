@@ -10,7 +10,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 const routes: Routes = [ {path: '', redirectTo: 'home', pathMatch: 'full'},
   // {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'products', component: ProductListComponent },
-  {path: 'products/:id', component: ProductDetailComponent },
+  {path: 'products/:id', component: ProductDetailComponent, resolve: ResolverSample},
   {path: '', component: SidebarComponent, outlet: 'sidebar'},
   {path : '**', component: ProductListComponent}
 ];

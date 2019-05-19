@@ -7,6 +7,7 @@ import { delay } from 'rxjs/operators';
 @Injectable()
 export class ResolverSample implements Resolve<Observable<string>> {
     resolve() {
-      return of('hello').pipe(delay(5000000));
+      console.log(`ResolverSample`);
+      return of('hello').pipe(delay(50000));
     }
 }
