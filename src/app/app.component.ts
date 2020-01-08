@@ -18,5 +18,9 @@ export class AppComponent  implements OnInit{
     setTimeout(() => {
       this.param2 = 'hi';
     }, 10000);
+
+    setTimeout(() => {
+      this.param2 = 'hi!!';
+    }, 10000);
   }
 }
