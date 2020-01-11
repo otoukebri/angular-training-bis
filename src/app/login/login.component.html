@@ -1,26 +1,23 @@
 <form [formGroup]="loginFormGroup" (onsubmit)="onSubmit()">
-    <div>
-        <label for="">
-          Login :
-        <input type="text" formControlName="login">
-        </label>
-      </div>
-      
-      <br>
-      
-      <div>
-          <label for="">
-              password :
-            <input type="password" formControlName="password">  
-          </label>
-      </div>
-      <!--
-      <label>Display again : {{loginGroup.login.valueChanges | async}} </label>
-      -->
-      <BR>
-    
-        <button (click)="authenticate()">Login:</button>
-      
-        <button type="submit">Submit</button>
+  <div>
+    <label>
+      Login :<input type="text" formControlName="login">
+    </label>
+  </div>
+  <div>
+    <label>
+      password :<input type="password" formControlName="password">
+    </label>
+  </div>
 
+  <div>
+    <label>
+      test :<input disabled type="radio" formControlName="test">
+    </label>
+  </div>
+  <!--
+      <label>Display again : {{loginGroup.login.valueChanges | async}} </label>
+  -->
+  <button (click)="authenticate()">Login:</button>
+  <button type="submit">Submit</button>
 </form>

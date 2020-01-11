@@ -10,13 +10,19 @@ export class LoginComponent implements OnInit {
 
   loginFormGroup = new FormGroup({
     login: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
+    test: new FormControl('disabled')
+
   });
 
 
   constructor() { }
 
   ngOnInit() {
+    this.loginFormGroup.valueChanges.subscribe( x =>{
+      console.log('x : '  + JSON.stringify(x));
+      console.log('form: ' + JSON.stringify(this.loginFormGroup.getRawValue()));
+    });
   }
 
   authenticate() {
