@@ -19,9 +19,13 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.loginFormGroup.valueChanges.subscribe( x =>{
+
+    console.log('login control value: ' +  this.loginFormGroup.get('login').patchValue('some test value'));
+
+    this.loginFormGroup.valueChanges.subscribe( x => {
       console.log('x : '  + JSON.stringify(x));
       console.log('form: ' + JSON.stringify(this.loginFormGroup.getRawValue()));
+      console.log('login control value: ' +  this.loginFormGroup.get('login').value);
     });
   }
 
