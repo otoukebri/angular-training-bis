@@ -24,3 +24,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 * Get form latest values 
 * Get form disabled values using getRawValue()
 * Patch input value
+* Form disrty
+* Form pristine
