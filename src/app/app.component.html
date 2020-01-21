@@ -1,13 +1,18 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <ng-template let-message="product" #myTemplateRef>
-    <div>
-      name {{product.name}}!!!
-    </div>
-    <div>
-      price {{product.price}}!!!
-    </div>
-  </ng-template>
-  <div *ngTemplateOutlet="myTemplateRef; context:{product: 'product'}">
-  </div>
-</div>
+<ng-container *ngIf="true == true">
+  hello4 !!
+</ng-container>
+<BR>
+<ng-container *ngIf="false == true">
+  hello5 !!
+</ng-container>
+<BR>
+<ng-template *ngIf="true == true">
+  hello6 !!
+</ng-template>
+<BR>
+<div *ngTemplateOutlet="sayHello; context: {message: 'Oussema' }" ></div>
+<BR>
+<ng-template let-message #sayHello >
+  say Hello ! myMsg {{message}}
+<ng-template>
+
