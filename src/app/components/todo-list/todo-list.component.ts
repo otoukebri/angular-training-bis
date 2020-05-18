@@ -12,10 +12,10 @@ export class TodoListComponent implements OnInit, AfterContentInit, AfterViewIni
   todos = new Array<Todo>();
 
   @ContentChild(TodoComponent)
-  todoContentComponent: TodoComponent;
+  todoContentChild: TodoComponent;
 
   @ViewChildren(TodoComponent)
-  todoContentChildren: QueryList<TodoComponent>;
+  todoViewChildren: QueryList<TodoComponent>;
 
   constructor() { }
 
@@ -25,10 +25,13 @@ export class TodoListComponent implements OnInit, AfterContentInit, AfterViewIni
   }
 
   ngAfterContentInit() {
-    console.log(`ngAfterContentInit.todoContentComponent  ${this.todoContentComponent}`);
+    console.log(`ngAfterContentInit.todoContentChild  ${JSON.stringify(this.todoContentChild)}`);
   }
 
   ngAfterViewInit() {
-    console.log(`ngAfterViewInit.todoContentChildren  ${this.todoContentChildren}`);
+    this.todoViewChildren.forEach( x => {
+      console.log(`ngAfterViewInit.todoViewChildren  ${JSON.stringify(x)}`);
+    });
+    
   }
 }

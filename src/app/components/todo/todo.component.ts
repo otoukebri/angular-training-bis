@@ -24,6 +24,6 @@ export class TodoComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges() {
-        console.log(this._todo);
+       // console.log(this._todo);
     }
 }
